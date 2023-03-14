@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script type="text/javascript" src="js/main.js"></script>
+    
+</head>
+
+<body>
+    <main id="main">
+        <div class="main-title">
+            <h1 class="title"> Listar Usuarios </h1>
+        </div>
+        <section class="form">
+            <form class="form-content">
+
+                <div class="form-content__item">
+                    <label for="idInputName">Nombres:</label> <br>
+                    <input type="text" name="name" id="idInputName" minlength="8" maxlength="50" autofocus
+                        autocomplete="on" value="" required placeholder="tu nombre"
+                        class="form-content__input form-content__input--fullname">
+                </div>
+
+                <div class="form-content__item">
+                    <label for="idInputName">Apellidos:</label> <br>
+                    <input type="text" name="name" id="idInputLastName" minlength="8" maxlength="50" autofocus
+                        autocomplete="on" value="" required placeholder="tu apellido"
+                        class="form-content__input form-content__input--fullname">
+                </div>
+
+                <div class="form-button">
+                    <button id="btncargar" class="form-content__btn-cargar"
+                        onclick="this.agregarUsuario(idInputName.value, idInputLastName.value)">Cargar</button>
+                </div>
+            </form>
+        </section>
+ 
+
+
+    </main>
+    <section class="table">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                </tr>
+            </thead>
+            <tbody id="listaUsuarios">
+
+            </tbody>
+        </table>
+
+
+    </section>
+
+</body>
+
+</html>
