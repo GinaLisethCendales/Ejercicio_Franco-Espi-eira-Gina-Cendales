@@ -7,17 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio</title>
     <link rel="stylesheet" href="/css/styles.css">
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
     
 </head>
 
-<body>
+<body onload="cargarDatos()">
     <main id="main">
         <div class="main-title">
             <h1 class="title"> Listar Usuarios </h1>
         </div>
         <section class="form">
-            <form class="form-content">
+            <form class="form-content" onsubmit="return false">
 
                 <div class="form-content__item">
                     <label for="idInputName">Nombres:</label> <br>
@@ -34,26 +34,28 @@
                 </div>
 
                 <div class="form-button">
-                    <button id="btncargar" class="form-content__btn-cargar"
-                        onclick="this.agregarUsuario(idInputName.value, idInputLastName.value)">Cargar</button>
+                    <button id="btncargar" class="form-content__btn"
+                        onclick="agregarUsuario(idInputName.value, idInputLastName.value)">Cargar</button>
+                        <button id="btneliminar" class="form-content__btn"
+                        onclick="EliminarTodos()">Eliminar todos</button>
                 </div>
             </form>
         </section>
- 
+ hola
 
 
     </main>
     <section class="table">
 
-        <table>
+        <table id="tablausuarios">
             <thead>
                 <tr>
                     <th>Nombres</th>
                     <th>Apellidos</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody id="listaUsuarios">
-
             </tbody>
         </table>
 

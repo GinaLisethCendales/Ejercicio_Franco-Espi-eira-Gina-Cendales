@@ -10,9 +10,8 @@
 body {
     font-size: .8rem;
     height: 100vh;
-    display: flex;
-    flex-direction: row;
-    flex-grow: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
     justify-content: left;
     text-overflow: ellipsis;
     overflow: auto;
@@ -45,7 +44,6 @@ input{
 main{
     justify-content: center;
     background-color: rgba(0,0,0, 0.8);
-    width: 50%;
     flex-direction: column;
     align-items: center;
     box-shadow: 3px 3px 7px black;
@@ -65,9 +63,10 @@ main{
     
 }
 
-#btncargar{
+.form-content__btn{
     margin-top: 15px;
     width: 100px;
+    margin: 5px;
     padding: 5px;
 }
 
@@ -89,8 +88,42 @@ main{
 .table{
     border: 1px solid black;
     grid-column: 2;
+    margin: 50px auto;
+    width: 500px;
+    background-color: white;
+    border-radius: 10px;
+    display: table;
 }
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid rgb(4, 4, 4);
+  }
+  
+  thead th:nth-child(1) {
+    width: 30%;
+  }
+  
+  thead th:nth-child(2) {
+    width: 30%;
+  }
+  
+  thead th:nth-child(3) {
+    width: 40%;
+  }
+  
+  
+  th,
+  td {
+    padding: 20px;
+    border: 1px solid black;
+  }
 
-th{
-
-}
+  table tr:nth-child(even) {
+    background-color:  #ddd;
+  }
+  
+  table tr:nth-child(odd) {
+    background-color: #fff;
+  }
